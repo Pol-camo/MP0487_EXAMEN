@@ -145,7 +145,9 @@ $eventos_query = $conexion->query("SELECT * FROM EVENTOS");
                                 <div class="event-info">
                                     <h2><?= htmlspecialchars($evento['NOMBRE']) ?></h2>
                                     <?php if (isset($_SESSION['rol'])): ?>
-                                        <a href="eventManager.php?id=<?= $evento['ID'] ?>" class="btn btn-primary btn-sm">Manage</a>
+                                        <?php if ($_SESSION["rol"] == 1): ?>
+                                            <a href="eventManager.php?id=<?= $evento['ID'] ?>" class="btn btn-primary btn-sm">Manage</a>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
