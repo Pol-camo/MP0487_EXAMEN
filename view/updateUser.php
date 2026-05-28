@@ -20,7 +20,7 @@ $rol = $_SESSION["rol"];
 
 
 // para hacer primer commit en mi repositorio
-
+// para hacer el primer commit bien hecho
 
 
 <!DOCTYPE html>
